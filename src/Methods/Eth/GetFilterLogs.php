@@ -15,6 +15,7 @@ use InvalidArgumentException;
 use Web3\Methods\EthMethod;
 use Web3\Validators\QuantityValidator;
 use Web3\Formatters\QuantityFormatter;
+use Web3\Validators\FilterValidator;
 
 class GetFilterLogs extends EthMethod
 {
@@ -24,7 +25,7 @@ class GetFilterLogs extends EthMethod
      * @var array
      */
     protected $validators = [
-        QuantityValidator::class
+        FilterValidator::class
     ];
 
     /**
@@ -33,7 +34,7 @@ class GetFilterLogs extends EthMethod
      * @var array
      */
     protected $inputFormatters = [
-        QuantityFormatter::class
+        // QuantityFormatter::class
     ];
 
     /**
